@@ -6,8 +6,9 @@ import ChatBox from './components/ChatBox';
 import logo from './logo.svg';
 import './App.css';
 
-const { APP_KEY, APP_CLUSTER } = require('./keys');
-console.log('APP_KEY', APP_KEY, 'APP_CLUSTER', APP_CLUSTER);
+const APP_KEY = 'a'
+const APP_CLUSTER = 'b'
+
 class App extends Component {
   constructor(props) {
     super(props);
