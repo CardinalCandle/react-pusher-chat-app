@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const { APP_ID, APP_KEY, APP_SECRET, APP_CLUSTER } = require('../.env.development.local');
+const { APP_ID, APP_KEY, APP_SECRET, APP_CLUSTER } = require('../src/keys');
 
 
 const app = express();
@@ -16,7 +16,7 @@ const pusher = new Pusher({
   key: APP_KEY,
   secret: APP_SECRET,
   cluster: APP_CLUSTER,
-  encrypted: true
+  useTLS: true
 });
 app.set('PORT', process.env.PORT || 5000);
 
